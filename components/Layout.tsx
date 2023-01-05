@@ -94,7 +94,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                             <nav>
                                 <ul>
                                 {menuItems.map(({ href, title, icon }) => (
-                                    <li className={`flex py-4 justify-center border-l-[3px] border-gray-200 ${router.asPath === href && 'border-violet-600'}`}>
+                                    <li key = {title} className={`flex py-4 justify-center border-l-[3px] border-gray-200 ${router.asPath === href && 'border-violet-600'}`}>
                                         <Link href={href}>
                                                 <div className='flex flex-row items-end transition-all group cursor-pointer'>
                                                         <div 
