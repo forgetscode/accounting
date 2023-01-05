@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+      @apply bg-white;
+    }
+}
+
+@layer components {
+    .header{
+        @apply text-violet-700 text-3xl
+    }  
+
+    .subheader{
+        @apply text-violet-700 text-xl
+    }
+
+    .title{
+        @apply text-gray-600 text-xl
+    }
+
+    .base-text{
+        @apply text-gray-600 
+    }
+
+    .icon-color{
+        @apply text-gray-700 
+    }
+    
+    .selected-color{
+        @apply text-violet-700
+    }
+
+    .hover-color{
+        @apply text-violet-600
+    }
+
+    .section-background{
+        @apply bg-gray-200
+    }
+
+}

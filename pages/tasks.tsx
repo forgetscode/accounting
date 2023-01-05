@@ -4,7 +4,7 @@ import Loading from "../components/Loading";
 
 const Fade = require("react-reveal/Fade")
 
-export default function Home() {
+export default function Tasks() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -27,8 +27,8 @@ export default function Home() {
         </Head>
         <Fade>
             <div className='flex h-full flex-col justify-center items-center'>
-                <h1 className='text-4xl mb-5 font-bold'>Home</h1>
-                <span className='text-7xl'>🏡</span>
+                <h1 className='text-4xl mb-5 font-bold'>Tasks</h1>
+                <span className='text-7xl'>💬</span>
             </div>
         </Fade>
         </>
