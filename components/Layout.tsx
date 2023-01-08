@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import NearMeIcon from '@mui/icons-material/NearMe';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ForumIcon from '@mui/icons-material/Forum';
 import BarChartIcon from '@mui/icons-material/BarChart';
@@ -15,7 +14,7 @@ const Fade = require("react-reveal/Fade")
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const [ showSideBar, setShowSideBar ] = useState<Boolean>(true);
+  const [showSideBar, setShowSideBar] = useState<Boolean>(true);
   const [loading, setLoading] = useState(true);
 
   const menuItems = [
@@ -88,7 +87,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <Fade>
             <div className='flex flex-row'>
-                <div className={`min-h-screen flex flex-col ${showSideBar? "w-80": "w-24"} transition-all`}>
+                <div className={`min-h-screen flex flex-col ${showSideBar? "w-80": "w-24"} transition-all ease-in-out`}> 
                     <div className='flex h-full items-center w-full section-background'>
                         <aside className='w-full'>
                             <nav>
@@ -96,31 +95,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                 {menuItems.map(({ href, title, icon }) => (
                                     <li key = {title} className={`flex py-4 justify-center border-l-[3px] border-gray-200 ${router.asPath === href && 'border-violet-600'}`}>
                                         <Link href={href}>
-                                                <div className='flex flex-row items-end transition-all group cursor-pointer'>
-                                                        <div 
-                                                        className={` ${showSideBar? "block" : "hidden"} p-2 title group-hover:hover-color ${
-                                                            router.asPath === href && 'selected-color '
-                                                            }`}
-                                                        >
+                                            <div className='flex flex-row items-end transition-all group cursor-pointer'>
+                                                    <div 
+                                                    className={` ${showSideBar? "block" : "hidden"} p-2 title group-hover:hover-color ${
+                                                        router.asPath === href && 'selected-color '
+                                                        }`}
+                                                    >
+                                                        {icon}
+                                                    </div>
+                                                    <div 
+                                                        className={`${showSideBar? "hidden" : "block"} p-2 title group-hover:hover-color ${
+                                                        router.asPath === href && 'selected-color '
+                                                        }`}
+                                                    >
+                                                        <Tooltip placement="right" title={title} enterDelay={0}>
                                                             {icon}
-                                                        </div>
-                                                        <div 
-                                                            className={`${showSideBar? "hidden" : "block"} p-2 title group-hover:hover-color ${
-                                                            router.asPath === href && 'selected-color '
-                                                            }`}
-                                                        >
-                                                            <Tooltip placement="right" title={title}  enterDelay={0}>
-                                                                {icon}
-                                                            </Tooltip>
-                                                        </div>
-                                                        <p
-                                                            className={`${showSideBar? "w-32 md:flex p-2 title group-hover:hover-color" : "hidden"} transition-all ${
-                                                            router.asPath === href && 'selected-color'
-                                                            }`}
-                                                        >
-                                                            {title}
-                                                        </p>
-                                                </div>
+                                                        </Tooltip>
+                                                    </div>
+                                                    <p
+                                                        className={`${showSideBar? "w-32 md:flex p-2 title group-hover:hover-color" : "hidden"} transition-all ${
+                                                        router.asPath === href && 'selected-color'
+                                                        }`}
+                                                    >
+                                                        {title}
+                                                    </p>
+                                            </div>
                                         </Link>
                                     </li>
                                 ))}
@@ -150,7 +149,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </button>
                 )} 
                 </div>
-    
                 <main className='flex-1'>{children}</main>
             </div>
         </Fade>

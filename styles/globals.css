@@ -10,11 +10,11 @@
 
 @layer components {
     .header{
-        @apply text-violet-700 text-3xl
+        @apply text-violet-700 text-3xl font-bold
     }  
 
     .subheader{
-        @apply text-violet-700 text-xl
+        @apply text-violet-700 text-xl font-semibold
     }
 
     .title{

@@ -1,12 +1,14 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
-import NotificationsDropdown from "../components/NotificationsDropDown";
 
 const Fade = require("react-reveal/Fade")
 
-export default function Home() {
+export default function Search() {
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
+    const formData = router.query.input;
 
     useEffect(() => {
         setTimeout(() => {
@@ -28,8 +30,8 @@ export default function Home() {
         </Head>
         <Fade>
             <div className='flex h-full w-full flex-col justify-center items-center'>
-                <h1 className='text-4xl mb-5 font-bold'>Home</h1>
-                <span className='text-7xl'>🏡</span>
+                <h1 className='text-4xl mb-5 font-bold'>Seach results for...</h1>
+                <h2 className='header'> {formData}</h2>
             </div>
         </Fade>
         </>

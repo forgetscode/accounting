@@ -1,11 +1,10 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
-import NotificationsDropdown from "../components/NotificationsDropDown";
 
 const Fade = require("react-reveal/Fade")
 
-export default function Home() {
+export default function Profile() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -28,7 +27,7 @@ export default function Home() {
         </Head>
         <Fade>
             <div className='flex h-full w-full flex-col justify-center items-center'>
-                <h1 className='text-4xl mb-5 font-bold'>Home</h1>
+                <h1 className='text-4xl mb-5 font-bold'>Profile</h1>
                 <span className='text-7xl'>🏡</span>
             </div>
         </Fade>
