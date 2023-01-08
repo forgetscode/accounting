@@ -99,7 +99,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
         <div className='flex flex-col h-screen w-full'>
             <div className='h-40 flex flex-col'>
                 <header className='flex flex-row w-full h-36 justify-between items-center px-4 lg:px-12 space-x-4'>
-                    <h1 className='header md:text-3xl text-xl'>{ menuItem ? menuItem.title : <></>}</h1> 
+                    <h1 className='header xl:text-3xl lg:text-2xl md:text-xl text-lg'>{ menuItem ? menuItem.title : <></>}</h1> 
                     <div className='flex flex-row px-2 space-x-4 md:space-x-6 title items-end'>
                         <Tooltip title={"Calendar"} placement="bottom">
                             <div className='flex flex-row cursor-pointer space-x-1'>
@@ -138,7 +138,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                                     </Tooltip>
                                     <form onSubmit={handleFormSubmit}>
                                     <input
-                                        className='scale-100 origin-right w-28 lg:w-36 xl:w-48 ease-in-out transition-all duration-500 bg-gray-100 rounded-lg px-1'
+                                        className='scale-100 origin-right w-20 lg:w-36 xl:w-48 ease-in-out transition-all duration-500 bg-gray-100 rounded-lg px-1'
                                         type="text"
                                         placeholder="Search..."
                                         value={input}
