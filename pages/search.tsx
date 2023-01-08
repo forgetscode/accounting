@@ -30,7 +30,7 @@ export default function Search() {
         </Head>
         <Fade>
             <div className='flex h-full w-full flex-col justify-center items-center'>
-                <h1 className='text-4xl mb-5 font-bold'>Seach results for...</h1>
+                <h1 className='lg:text-4xl text-2xl mb-5 font-bold'>Seach results for...</h1>
                 <h2 className='header'> {formData}</h2>
             </div>
         </Fade>

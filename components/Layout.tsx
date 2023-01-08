@@ -87,7 +87,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <Fade>
             <div className='flex flex-row'>
-                <div className={`min-h-screen flex flex-col ${showSideBar? "w-80": "w-24"} transition-all ease-in-out`}> 
+                <div className={`min-h-screen flex flex-col ${showSideBar? "w-80": "w-24"} transition-all ease-in-out duration-500`}> 
                     <div className='flex h-full items-center w-full section-background'>
                         <aside className='w-full'>
                             <nav>
@@ -97,14 +97,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                         <Link href={href}>
                                             <div className='flex flex-row items-end transition-all group cursor-pointer'>
                                                     <div 
-                                                    className={` ${showSideBar? "block" : "hidden"} p-2 title group-hover:hover-color ${
+                                                    className={` ${showSideBar? "block" : "hidden"} p-2 transition-all ease-in-out duration-500 title group-hover:hover-color ${
                                                         router.asPath === href && 'selected-color '
                                                         }`}
                                                     >
                                                         {icon}
                                                     </div>
                                                     <div 
-                                                        className={`${showSideBar? "hidden" : "block"} p-2 title group-hover:hover-color ${
+                                                        className={`${showSideBar? "hidden" : "block"} p-2 transition-all ease-in-out duration-500 title group-hover:hover-color ${
                                                         router.asPath === href && 'selected-color '
                                                         }`}
                                                     >
@@ -112,13 +112,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                                             {icon}
                                                         </Tooltip>
                                                     </div>
+                                                    <Fade>
                                                     <p
-                                                        className={`${showSideBar? "w-32 md:flex p-2 title group-hover:hover-color" : "hidden"} transition-all ${
+                                                        className={`${showSideBar? "w-32 md:flex p-2 title group-hover:hover-color" : "hidden"} transition-all ease-in-out duration-500 ${
                                                         router.asPath === href && 'selected-color'
                                                         }`}
                                                     >
                                                         {title}
                                                     </p>
+                                                    </Fade>
                                             </div>
                                         </Link>
                                     </li>
@@ -131,7 +133,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <button
                         type="button"
                         onClick={() => setShowSideBar(!showSideBar)}
-                        className="hidden sm:block absolute z-10 section-background rounded-full left-[292px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all"
+                        className="hidden sm:block absolute z-10 section-background rounded-full left-[292px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all ease-in-out duration-500"
                     >
                         <Tooltip title="Close" placement="right">
                             <p> {'<'} </p>
@@ -141,7 +143,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <button
                         type="button"
                         onClick={() => setShowSideBar(!showSideBar)}
-                        className="hidden sm:block absolute z-10 section-background rounded-full left-[72px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all"
+                        className="hidden sm:block absolute z-10 section-background rounded-full left-[72px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all ease-in-out duration-500"
                     >
                         <Tooltip title="Open" placement="right">
                             <p> {'>'} </p>
