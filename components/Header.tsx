@@ -112,7 +112,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                                 </div>
                             </div>
                         </Tooltip>                                      
-                        <div className='hidden lg:flex'>
+                        <div className='hidden md:flex'>
                             {!isFormOpen ? (
                                     <div className='flex flex-row space-x-2 -mr-12 ease-in-out transition-all'>
                                     <Tooltip title={"Open"} placement="bottom">
@@ -146,7 +146,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                                         onChange={(event) => setInput(event.target.value)}
                                     />
                                     <Tooltip title={"Search"} placement="bottom">
-                                        <button type="submit" className='hover-color scale-100 ease-in-out transition-all'>
+                                        <button type="submit" className='hover-color scale-100 ease-in-out transition-all '>
                                             <ChevronRightIcon style={{ fontSize: 28 }}/>
                                         </button>
                                     </Tooltip>
@@ -155,7 +155,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                             )}
                         </div>
 
-                        <div className='flex lg:hidden'>
+                        <div className='flex md:hidden'>
                             <Link href="/search">
                                 <Tooltip title={"Open"} placement="bottom">
                                     <button onClick={handleFormOpen}>
