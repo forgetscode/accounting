@@ -133,7 +133,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <button
                         type="button"
                         onClick={() => setShowSideBar(!showSideBar)}
-                        className="hidden sm:block absolute z-10 section-background rounded-full left-[292px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all ease-in-out duration-500"
+                        className="scale-0 sm:scale-100 absolute z-10 section-background rounded-full left-[292px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all ease-in-out duration-500"
                     >
                         <Tooltip title="Close" placement="right">
                             <p> {'<'} </p>
@@ -143,7 +143,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <button
                         type="button"
                         onClick={() => setShowSideBar(!showSideBar)}
-                        className="hidden sm:block absolute z-10 section-background rounded-full left-[72px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all ease-in-out duration-500"
+                        className="scale-0 sm:scale-100 absolute z-10 section-background rounded-full left-[72px] top-1/2 w-10 h-14 text-center pl-4 selected-color text-xl transition-all ease-in-out duration-500"
                     >
                         <Tooltip title="Open" placement="right">
                             <p> {'>'} </p>

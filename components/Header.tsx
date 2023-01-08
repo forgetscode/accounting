@@ -97,8 +97,8 @@ export default function Header({ children }: { children: React.ReactNode }) {
     
     return (
         <div className='flex flex-col h-screen w-full'>
-            <div className='md:h-40 h-20 flex flex-col md:pt-0 pt-4 transition-all duration-300'>
-                <header className='flex flex-row w-full md:h-36 h-18 justify-between items-center px-4 lg:px-12 space-x-4 transition-all duration-300'>
+            <div className='md:h-40 h-20 flex flex-col md:pt-0 pt-4'>
+                <header className='flex flex-row w-full md:h-36 h-18 justify-between items-center px-4 lg:px-12 space-x-4'>
                     <h1 className='header xl:text-3xl lg:text-2xl md:text-xl text-lg'>{ menuItem ? menuItem.title : <></>}</h1> 
                     <div className='flex flex-row px-2 space-x-4 md:space-x-6 title items-end'>
                         <Tooltip title={"Calendar"} placement="bottom">
